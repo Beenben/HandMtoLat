@@ -1,0 +1,72 @@
+MathToLat class diagram
+
+https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-class-diagram/
+
+@startuml
+class MainWindow {
+    - snipButton: Button
+    - loadImageButton: Button
+    - previewImageButton: Button
+    - startStopButton: Button
+    - codeWindow: TextBox
+    - latexWindow: RenderBox
+    - imageProcessor: ImageProcessor
+    + minimize(): void
+    + previewImage(image: Image): void
+}
+
+class SnipButton {
+    + onClick(): void
+    + captureScreen(): Image
+}
+
+class LoadImageButton {
+    + onClick(): void
+    + openFileExplorer(): File
+}
+
+class PreviewImageButton {
+    + onClick(): void
+    + showPreview(image: Image): void
+}
+
+class StartStopButton {
+    - isRunning: Boolean
+    + onClick(): void
+    + startProcessing(): void
+    + stopProcessing(): void
+}
+
+class CodeWindow {
+    + displayCode(code: String): void
+    + copyCode(): void
+}
+
+class LaTeXWindow {
+    + renderCode(code: String): void
+}
+
+class ImageProcessor {
+    + processImage(image: Image): String
+    + boundingBoxDetection(image: Image): List<BoundingBox>
+    + symbolDetection(boundingBoxes: List<BoundingBox>): List<Symbol>
+    + structuralAnalysis(symbols: List<Symbol>): String
+    + generateLaTeX(symbols: List<Symbol>): String
+}
+
+
+
+MainWindow <*>- SnipButton
+MainWindow <*>- LoadImageButton
+MainWindow <*>- PreviewImageButton
+MainWindow <*>- StartStopButton
+MainWindow <*>- CodeWindow
+MainWindow <*>- LaTeXWindow
+MainWindow <*>- ImageProcessor
+
+SnipButton <*>- ImageProcessor
+LoadImageButton <*>- ImageProcessor
+PreviewImageButton <*>- MainWindow
+StartStopButton <*>- ImageProcessor
+
+@enduml
