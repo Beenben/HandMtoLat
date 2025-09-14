@@ -1,5 +1,5 @@
 Flask==2.0.1
 Pillow==8.2.0
 opencv-python==4.5.3.20210927
-PyQt5==5.15.4
+PyQt5==5.15.11
 numpy==1.21.2

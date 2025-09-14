@@ -34,12 +34,15 @@ math-to-latex-translator
 
 ## Setup Instructions
 
+**Python 3.12.7**
+
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/Beenben/HandMtoLat.git
    ```
 2. Navigate to the project directory:
    ```
+   cd HandMtoLat
    cd math-to-latex-translator
    ```
 3. Install the required dependencies:
@@ -54,4 +57,5 @@ Run the application using the following command:
 python src/main.py
 ```
 
-Follow the on-screen instructions to capture or load images and extract LaTeX code.
+Follow the on-screen instructions to capture or load images and extract LaTeX code. (only works for basic equations - see test_set1 directory) 
+
