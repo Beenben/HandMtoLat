@@ -1,6 +1,6 @@
 # Math to LaTeX Translator
 
-This project is a GUI application that translates mathematical expressions from images into LaTeX code. It provides an intuitive interface for users to capture or load images, preview them, and extract LaTeX code seamlessly.
+HandMtoLat is a application that translates images of mathematical expressions into LaTeX code. It provides an GUI for users to capture and load images, preview images, and a window to see that LaTeX code after the expression has been translated. 
 
 ## Features
 
