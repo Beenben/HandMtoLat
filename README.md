@@ -2,6 +2,9 @@
 
 HandMtoLat is a application that translates images of mathematical expressions into LaTeX code. It provides an GUI for users to capture and load images, preview images, and a window to see that LaTeX code after the expression has been translated. 
 
+![translation demo](https://github.com/Beenben/HandMtoLat/blob/main/HandMtoLat.gif)
+
+
 ## Features
 
 - **Screen Snipping**: Capture a portion of the screen to extract mathematical expressions.
